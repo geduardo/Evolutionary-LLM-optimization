@@ -1,5 +1,4 @@
 # Evolutionary-LLM-optimization
-Evolutionary LLM Optimization
 ## Project Description
 The Evolutionary LLM Optimization project aims to leverage the knowledge and capabilities of large language models (LLMs) to solve complex optimization tasks using an evolutionary approach. By combining search-based methods, inter-agent communication, and learning, we can effectively navigate the search space and find optimal solutions.
 Key Features
