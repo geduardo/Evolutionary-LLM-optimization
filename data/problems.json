@@ -1,0 +1,47 @@
+[
+  {
+    "id": "problem_1",
+    "name": "Matrix Inversion",
+    "description": "Implement a function to invert a 1000x1000 matrix of double-precision floating-point numbers. Your goal is to minimize the execution time while maintaining accuracy.",
+    "input_format": "A 10000x10000 matrix of double-precision floating-point numbers.",
+    "output_format": "The inverted 1000x1000 matrix.",
+    "constraints": [
+      "The input matrix is guaranteed to be invertible.",
+      "The maximum relative error of the result compared to the true inverse should be less than or equal to 1e-6."
+    ],
+    "evaluation_criteria": [
+      "Runtime: The function will be timed, and solutions with shorter execution times are preferred.",
+      "Accuracy: The result must meet the specified precision requirement."
+    ],
+    "time_limit": 300,
+    "precision_requirement": 1e-6,
+    "evaluation_type": "runtime",
+    "example": {
+      "input": "[[1.0, 0.0], [0.0, 1.0]]",
+      "output": "[[1.0, 0.0], [0.0, 1.0]]",
+      "explanation": "The identity matrix is its own inverse. Note that the actual input will be a 1000x1000 matrix."
+    }
+  },
+  {
+    "id": "problem_2",
+    "name": "Large-Scale Sorting",
+    "description": "Sort an array of 10 million 64-bit integers in ascending order as quickly as possible.",
+    "input_format": "An array of 10 million 64-bit integers.",
+    "output_format": "The same array sorted in ascending order.",
+    "constraints": [
+      "1 <= array length <= 10,000,000",
+      "Each integer is a 64-bit integer"
+    ],
+    "evaluation_criteria": [
+      "Correctness of the sorting",
+      "Runtime performance"
+    ],
+    "time_limit": 60,
+    "evaluation_type": "runtime",
+    "example": {
+      "input": "[5, 2, 9, 1, 7, 6, 3]",
+      "output": "[1, 2, 3, 5, 6, 7, 9]",
+      "explanation": "The input array is sorted in ascending order."
+    }
+  }
+]
