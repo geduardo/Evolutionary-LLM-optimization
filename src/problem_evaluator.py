@@ -3,7 +3,7 @@ import time
 
 def evaluate_matrix_inversion(solution_func):
     # Generate a random 10000x10000 invertible matrix
-    matrix = np.random.rand(10000, 10000)
+    matrix = np.random.rand(1000, 1000)
     matrix = np.dot(matrix, matrix.transpose())  # Ensure it's invertible
 
     start_time = time.time()

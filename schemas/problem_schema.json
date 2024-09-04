@@ -1,77 +1,74 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "array",
-    "items": {
-      "type": "object",
-      "properties": {
-        "id": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+      "id": {
           "type": "string",
           "pattern": "^problem_[0-9]+$"
-        },
-        "name": {
+      },
+      "name": {
           "type": "string"
-        },
-        "description": {
+      },
+      "description": {
           "type": "string"
-        },
-        "input_format": {
+      },
+      "input_format": {
           "type": "string"
-        },
-        "output_format": {
+      },
+      "output_format": {
           "type": "string"
-        },
-        "constraints": {
+      },
+      "constraints": {
           "type": "array",
           "items": {
-            "type": "string"
+              "type": "string"
           }
-        },
-        "evaluation_criteria": {
+      },
+      "evaluation_criteria": {
           "type": "array",
           "items": {
-            "type": "string"
+              "type": "string"
           }
-        },
-        "time_limit": {
+      },
+      "time_limit": {
           "type": "number",
           "minimum": 0
-        },
-        "precision_requirement": {
+      },
+      "precision_requirement": {
           "type": "number",
           "minimum": 0
-        },
-        "evaluation_type": {
+      },
+      "evaluation_type": {
           "type": "string",
           "enum": ["runtime", "accuracy", "runtime_and_accuracy"]
-        },
-        "example": {
+      },
+      "example": {
           "type": "object",
           "properties": {
-            "input": {
-              "type": "string"
-            },
-            "output": {
-              "type": "string"
-            },
-            "explanation": {
-              "type": "string"
-            }
+              "input": {
+                  "type": "string"
+              },
+              "output": {
+                  "type": "string"
+              },
+              "explanation": {
+                  "type": "string"
+              }
           },
           "required": ["input", "output", "explanation"]
-        }
-      },
-      "required": [
-        "id",
-        "name",
-        "description",
-        "input_format",
-        "output_format",
-        "constraints",
-        "evaluation_criteria",
-        "time_limit",
-        "evaluation_type",
-        "example"
-      ],
-      "additionalProperties": false
-    }
-  }
+      }
+  },
+  "required": [
+      "id",
+      "name",
+      "description",
+      "input_format",
+      "output_format",
+      "constraints",
+      "evaluation_criteria",
+      "time_limit",
+      "evaluation_type",
+      "example"
+  ],
+  "additionalProperties": false
+}
