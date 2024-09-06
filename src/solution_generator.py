@@ -5,12 +5,13 @@ from providers.anthropic_provider import generate_response_anthropic
 from problem_parser import load_problem_by_id, evaluate_problem_solution
 
 class SolutionGenerator:
-    def __init__(self, problem_id: str, agents: List[Tuple[str, str]]):
+    def __init__(self, problem_id: str, agents: List[Tuple[str, str]], max_tokens: int = 1000):
         self.problem = load_problem_by_id('data/problems.json', problem_id)
         self.agents = agents
         self.best_solution = None
         self.best_performance = None
         self.previous_attempts = []
+        self.max_tokens = max_tokens
 
     def generate_solutions(self, iteration: int = 0) -> List[str]:
         solutions = []
@@ -22,10 +23,10 @@ class SolutionGenerator:
     def _generate_solution(self, provider: str, model: str, iteration: int) -> str:
         prompt = self._create_prompt(iteration)
         if provider == 'openai':
-            response = generate_response_openai(model, 1000, prompt)
+            response = generate_response_openai(model, self.max_tokens, prompt)
             return response.choices[0].message.content
         elif provider == 'anthropic':
-            response = generate_response_anthropic(model, 1000, prompt)
+            response = generate_response_anthropic(model, self.max_tokens, prompt)
             return response.content
         else:
             raise ValueError(f"Unknown provider: {provider}")
