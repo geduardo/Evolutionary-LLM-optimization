@@ -1,0 +1,7 @@
+```json
+{
+    "imports": [],
+    "code": "def solution(arr):\n    arr.sort()\n    return arr",
+    "explanation": "The solution leverages Python’s built-in sort method, which uses Timsort. Timsort is an adaptive, stable, and efficient sorting algorithm derived from merge sort and insertion sort, and is optimal for many real-world data sets. It has an average and worst-case time complexity of O(n log n), making it well-suited for sorting the given array size within the time constraints."
+}
+```

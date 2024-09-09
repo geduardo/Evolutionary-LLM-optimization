@@ -42,9 +42,9 @@ def evaluate_integer_sorting(solution_func):
     }
 
 def evaluate_solution(problem_id, solution_func):
-    if problem_id == "problem_1":
+    if problem_id == "1":
         return evaluate_matrix_inversion(solution_func)
-    elif problem_id == "problem_2":
+    elif problem_id == "2":
         return evaluate_integer_sorting(solution_func)
     else:
         raise ValueError(f"Unknown problem ID: {problem_id}")

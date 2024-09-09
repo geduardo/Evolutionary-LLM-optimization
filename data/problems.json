@@ -1,6 +1,6 @@
 [
   {
-    "id": "problem_1",
+    "id": 1,
     "name": "Matrix Inversion",
     "description": "Implement a function to invert a 1000x1000 matrix of double-precision floating-point numbers. Your goal is to minimize the execution time while maintaining accuracy.",
     "input_format": "A 10000x10000 matrix of double-precision floating-point numbers.",
@@ -23,7 +23,7 @@
     }
   },
   {
-    "id": "problem_2",
+    "id": 2,
     "name": "Large-Scale Sorting",
     "description": "Sort an array of 10 million 64-bit integers in ascending order as quickly as possible.",
     "input_format": "An array of 10 million 64-bit integers.",
