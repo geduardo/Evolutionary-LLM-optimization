@@ -8,14 +8,29 @@ import json
 import ast
 import re
 class SolutionGenerator:
-    def __init__(self, problem_id: str, agents: List[Tuple[str, str]], max_tokens: int = 1000):
+    def __init__(self, problem_id: str, agents: List[Tuple[str, str]]):
         self.problem = load_problem_by_id('../data/problems.json', problem_id)
         self.agents = agents
         self.best_solution = None
         self.best_performance = None
         self.previous_attempts = []
+        
+    def extract_json(self, text: str) -> Dict:
+        try:
+            # Find the outermost curly braces
+            match = re.search(r'\{[\s\S]*\}', text)
+            if match:
+                json_str = match.group(0)
+                # Replace newlines in the code block with escaped newlines
+                json_str = re.sub(r'"""([\s\S]*?)"""', lambda m: '"{}"'.format(m.group(1).replace('\n', '\\n')), json_str)
+                return json.loads(json_str)
+            else:
+                return None
+        except (ValueError, json.JSONDecodeError) as e:
+            print(f"Error parsing JSON: {e}")
+            return None
 
-    def generate_solutions(self, iteration: int = 0) -> List[str]:
+    def generate_solutions(self, iteration: int = 0) -> List[Dict]:
         solutions = []
         for provider, model in self.agents:
             
