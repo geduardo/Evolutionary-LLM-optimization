@@ -1,5 +1,7 @@
 # Evolutionary-LLM-optimization
 
+(This is a work in progress)
+
 ## Project Description
 
 This project aims to leverage the knowledge and capabilities of large language models (LLMs) to solve complex optimization tasks using an evolutionary approach. By combining search-based methods, inter-agent communication, and learning, the search space can be explored to find optimal solutions.
@@ -38,12 +40,6 @@ This file contains a list of problem definitions in JSON format.
 
 This file defines the JSON schema for problem definitions.
 
-## Future Work
-
-* Implement the core evolutionary algorithm logic.
-* Integrate with LLMs for solution generation.
-* Develop a reporting mechanism for tracking progress and results.
-* Expand the problem domain coverage.
 
 ## Contributing
 
